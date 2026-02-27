@@ -74,6 +74,7 @@ create_stak() {
 
   echo "Fantastic, building your full-stack app with $frontend_choice frontend, $backend_choice backend, and $db_choice database..."
   frontend_scaffolding
+  backend_scaffolding
   echo "Your full-stack app is complete. Use 'stak run -a' to run the entire app. See 'stak -h' for more options"
 }
 
@@ -99,6 +100,23 @@ frontend_scaffolding() {
       ;;
     *)
       echo "frontend choice was not recognized"
+      ;;
+  esac
+}
+
+backend_scaffolding() {
+  case $backend_choice in
+    "Java")
+      mkdir -p backend/src/main/java
+      cd backend/src/main/java
+      echo "public class Main {" > Main.java
+      echo "  public static void main(String[] args) {" >> Main.java
+      echo "    System.out.println(\"Hello world\");" >> Main.java
+      echo "  }" >> Main.java
+      echo "}" >> Main.java
+      ;;
+    *)
+      echo "backend choice was not recognized"
       ;;
   esac
 }
