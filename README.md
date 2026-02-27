@@ -1,8 +1,17 @@
 # Stak
 Full-stack scaffolding CLI tool that allows a developer to get a RUNNING app with the exact frontend, backend, and database tooling they desire, that also runs in a unified environment. The learning curve is about 1 minute, and can save weeks of headaches by giving developers something that works from the start at a FULL-STACK level.
 
-## MVP
-Should be able to choose between 3 frontend tools, 3 backend tools, and 3 databases, allow the user to implement _every_ possible combination of these 9 options, and provide the user with a _fully-integrated_ app that **actually runs**. If this condition is met, the Minimum Viable Product has been achieved.
+## MVP: Allow every combination of db, backend, and frontend options for the PoC tech stack (listed below) to have a basic functionality that RUNS and is FUNCTIONAL with some basic functionality defined in the steps below
+### Prove:
+* backend compiles
+* database connects
+* frontend loads
+### Steps:
+1. click frontend button
+2. send HTTP GET request to backend
+3. backend API returns something uber simple from the database
+4. simple data gets printed to the screen on the frontend
+5. ta-da! Full-stack app that runs. Let's start here then go from there
 
 ### Database Options
 * MongoDB
