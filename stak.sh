@@ -114,6 +114,7 @@ backend_scaffolding() {
       echo "    System.out.println(\"Hello world\");" >> Main.java
       echo "  }" >> Main.java
       echo "}" >> Main.java
+      cd ../../../../
       ;;
     *)
       echo "backend choice was not recognized"
