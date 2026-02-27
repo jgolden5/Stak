@@ -22,7 +22,6 @@ Awesome, and finally, which frontend will you use with your Java backend and Pos
 1) Angular.js
 2) React.js
 3) Vanilla (JS/CSS/HTML only)
-4) Vue.js
 (response): 3
 
 Fantastic, building your full-stack app with Vanilla frontend, Java backend, and PostgreSQL database...
