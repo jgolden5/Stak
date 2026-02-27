@@ -1,6 +1,34 @@
 # Stak
 Full-stack scaffolding CLI tool that allows a developer to get a RUNNING app with the exact frontend, backend, and database tooling they desire, that also runs in a unified environment. The learning curve is about 1 minute, and can save weeks of headaches by giving developers something that works from the start at a FULL-STACK level.
 
+## Usage
+```
+jgolden5 ~ $ cd superCoolApp
+jgolden5 ~/superCoolApp $ stak create
+
+Which of the following will you use for your database?
+1) MongoDB
+2) MySQL
+3) PostgreSQL
+(response): 3
+
+Great, and which backend will you use with your PostgreSQL database?
+1) Java
+2) Go
+3) Node
+(response): 1
+
+Awesome, and finally, which frontend will you use with your Java backend and PostgreSQL database?
+1) Angular.js
+2) React.js
+3) Vanilla (JS/CSS/HTML only)
+4) Vue.js
+(response): 3
+
+Fantastic, building your full-stack app with Vanilla frontend, Java backend, and PostgreSQL database...
+Your full-stack app is complete. Use `stak run -a` to run the entire app. See `stack -h` for more options
+```
+
 ## MVP: Allow every combination of db, backend, and frontend options for the PoC tech stack (listed below) to have a basic functionality that RUNS and is FUNCTIONAL with some basic functionality defined in the steps below
 ### Prove:
 * backend compiles
