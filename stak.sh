@@ -73,5 +73,32 @@ create_stak() {
   esac
 
   echo "Fantastic, building your full-stack app with $frontend_choice frontend, $backend_choice backend, and $db_choice database..."
+  frontend_scaffolding
   echo "Your full-stack app is complete. Use 'stak run -a' to run the entire app. See 'stak -h' for more options"
+}
+
+frontend_scaffolding() {
+  case $frontend_choice in
+    "Vanilla")
+      mkdir frontend/
+      echo "
+      <html>
+      <body>
+      <button id="messageButton">Get Message</button>
+      <p id="message"></p>
+      <script src="app.js"></script>
+      </body>
+      </html>" > frontend/index.html
+
+      echo "
+      document.getElementById(\"messageButton\").addEventListener(\"click\", function() {
+        document.getElementById(\"message\").innerHTML = \"Button was pressed!\"
+      });" > frontend/app.js
+
+      touch frontend/app.js frontend/index.html
+      ;;
+    *)
+      echo "frontend choice was not recognized"
+      ;;
+  esac
 }

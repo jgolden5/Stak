@@ -84,3 +84,5 @@ Your full-stack app is complete. Use `stak run -a` to run the entire app. See `s
 26. PostgreSQL + Node   + Vanilla
 27. PostgreSQL + Python + Vanilla
 ```
+### Implementation note
+Start by building this app in pure Bash, then restructure it using itself (META) and adding additional functionality
