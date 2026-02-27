@@ -1,5 +1,5 @@
-# Stak
-Full-stack scaffolding CLI tool that allows a developer to get a RUNNING app with the exact frontend, backend, and database tooling they desire, that also runs in a unified environment. The learning curve is about 1 minute, and can save weeks of headaches by giving developers something that works from the start at a FULL-STACK level.
+# Stak: It's sort of like NPM, but it works for _everything_, not just js-based packages
+Full-stack scaffolding and runtime orchestration CLI tool that allows a developer to get a RUNNING app with the exact frontend, backend, and database tooling they desire, that also runs in a unified environment. The learning curve is about 1 minute, and can save weeks of headaches by giving developers something that works from the start at a FULL-STACK level.
 
 ## Usage
 ```
@@ -30,6 +30,7 @@ Your full-stack app is complete. Use `stak run -a` to run the entire app. See `s
 ```
 
 ## MVP: Allow every combination of db, backend, and frontend options for the PoC tech stack (listed below) to have a basic functionality that RUNS and is FUNCTIONAL with some basic functionality defined in the steps below
+**Remember, basic functionality now, structure and prettiness later**
 ### Prove:
 * backend compiles
 * database connects
