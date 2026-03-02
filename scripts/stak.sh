@@ -32,8 +32,8 @@ create_stak() {
 
   echo "Great, and which backend will you use with your $db_choice database?"
   echo "1) Java"
-  echo "2) Go"
-  echo "3) Node"
+  echo "2) Node"
+  echo "3) Python"
 
   read -n1 -p "(response): " backend_selection
   echo
