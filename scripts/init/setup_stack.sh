@@ -1,14 +1,6 @@
 #!/bin/bash
 
-stak() {
-  if [[ "$1" == 'create' ]]; then
-    create_stak
-  else
-    echo "command \"$1\" not recognized"
-  fi
-}
-
-create_stak() {
+setup_stack() {
   echo "Which of the following will you use for your database?"
   echo "1) MongoDB"
   echo "2) MySQL"
@@ -73,51 +65,8 @@ create_stak() {
   esac
 
   echo "Fantastic, building your full-stack app with $frontend_choice frontend, $backend_choice backend, and $db_choice database..."
-  frontend_scaffolding
-  backend_scaffolding
+  frontend/scaffold.sh
+  #backend/scaffold.sh
   echo "Your full-stack app is complete. Use 'stak run -a' to run the entire app. See 'stak -h' for more options"
 }
 
-frontend_scaffolding() {
-  case $frontend_choice in
-    "Vanilla")
-      mkdir frontend/
-      echo "
-      <html>
-      <body>
-      <button id="messageButton">Get Message</button>
-      <p id="message"></p>
-      <script src="app.js"></script>
-      </body>
-      </html>" > frontend/index.html
-
-      echo "
-      document.getElementById(\"messageButton\").addEventListener(\"click\", function() {
-        document.getElementById(\"message\").innerHTML = \"Button was pressed!\"
-      });" > frontend/app.js
-
-      touch frontend/app.js frontend/index.html
-      ;;
-    *)
-      echo "frontend choice was not recognized"
-      ;;
-  esac
-}
-
-backend_scaffolding() {
-  case $backend_choice in
-    "Java")
-      mkdir -p backend/src/main/java
-      cd backend/src/main/java
-      echo "public class Main {" > Main.java
-      echo "  public static void main(String[] args) {" >> Main.java
-      echo "    System.out.println(\"Hello world\");" >> Main.java
-      echo "  }" >> Main.java
-      echo "}" >> Main.java
-      cd ../../../../
-      ;;
-    *)
-      echo "backend choice was not recognized"
-      ;;
-  esac
-}

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+case "$1" in 
+  setup)
+    ./scripts/init/setup_stack.sh
+    ;;
+  help)
+    ./scripts/help.sh
+    ;;
+  *)
+    echo "command \"$1\" not recognized. See 'stak help' for a list of commands"
+    ;;
+esac
+
+: << 'COMMENT'
+backend_scaffolding() {
+  case $backend_choice in
+    "Java")
+      mkdir -p backend/src/main/java
+      cd backend/src/main/java
+      echo "public class Main {" > Main.java
+      echo "  public static void main(String[] args) {" >> Main.java
+      echo "    System.out.println(\"Hello world\");" >> Main.java
+      echo "  }" >> Main.java
+      echo "}" >> Main.java
+      cd ../../../../
+      ;;
+    *)
+      echo "backend choice was not recognized"
+      ;;
+  esac
+}
+COMMENT
