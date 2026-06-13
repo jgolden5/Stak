@@ -7,6 +7,10 @@ Stak is a CLI tool which builds a full-stack application with a frontend, backen
 ```
 git clone https://github.com/jgolden5/Stak
 ```
+#### initialize project (this will install project into local bin directory and source the file)
+```
+./init.sh
+```
 #### Verify install
 ```
 stak -v
