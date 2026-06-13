@@ -1,0 +1,14 @@
+#!/bin/bash
+
+case "$1" in 
+  -v|--version)
+    cat VERSION
+    ;;
+  -h|--help)
+    cat help.txt
+    ;;
+  *)
+    echo "command \"$1\" not recognized. See 'stak help' for a list of commands"
+    ;;
+esac
+

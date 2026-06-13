@@ -1,0 +1,6 @@
+Stak: Full-Stack Scaffolding at your fingertips
+
+Usage: stak [OPTION...] stack-name
+
+  -h, --help                print this help list
+  -v, --version             print program version

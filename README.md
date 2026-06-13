@@ -1,4 +1,4 @@
-# Stak - The King of full-stack scaffolding
+# Stak - Full-Stack Scaffolding at your fingertips
 
 Stak is a CLI tool which builds a full-stack application with a frontend, backend, and database language/framework of the user's choosing.
 
